@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+       .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-summary 
+        { 
+            background-color: ghostwhite;
+             padding: 20px;
+        }
+        .cart-item img 
+        { 
+            width: 150px; 
+            margin-right: 20px;
+            height: 150px;
+        }
+        .cart-item
+        {
+             border-bottom: 1px solid #ddd;
+              padding: 20px 0;
+        }
+        .product-description
+        {
+            font-size:12px; font-style: oblique; 
+            font-weight: bold; 
+        }
+        .product-description .date
+         {
+              color: green;
+         }
+         .b-description{
+            font-size:10px; font-style: oblique;
+
+         }
+         .addition-product{
+            font-size: 12px;
+         }
+
+        .product-title 
+        { 
+            font-weight: bold; 
+            font-size:14px;
+         }
+        .price, .discount-price ,.discount
+        {
+             color: #ff5722; 
+             font-weight: bold;
+         }
+        .old-price
+        {
+             text-decoration: line-through; 
+             color: #777; 
+        }
+        .quantity-control button 
+        { 
+            width: 30px;
+            height: 30px; 
+        }
+        .cart-summary .total-savings
+        { 
+            color: green;
+            font-weight: bold;
+         }
+        .btn-checkout
+         {
+            background-color: #000;
+            color: #fff;
+         }
+        .cart-headings
+        { 
+            font-weight: bold;
+            padding: 15px 0; 
+        }
+        .cart-headings .col
+        {
+             text-align: center; 
+        } 
+        .remove-item
+         {
+         cursor: pointer;
+         color: grey;
+         font-size: 15px;
+         margin-left: 5px;
+       }
+
+      
+    
+        .cart-item .col {
+             text-align: center;
+            
+            }
+    </style>
+
+    
+</head>
+<body>
+
+<div class="container my-5">
+<h2>Your Cart (3 items)</h2>
+   <div class="row cart-headings">
+        <div class="col-md-4 ">Product</div>
+        <div class="col-md-2 ">Quantity</div>
+        <div class="col-md-1 ">Price</div>
+    </div>
+
+<div class="row">
+    <div class="col-md-8">
+           <div class="cart-item row align-items-center">
+                <div class="col-md-6 d-flex align-items-center">
+                    <img src="img/gd.png" alt="Product Image">
+                    <div>
+                        <div class="product-title">Alden Chest of Drawer (S)</div>
+                        <div class="product-description">Expected Dispatch Date: <span class="date">Jun 28, 2024</span></div>
+                        <div class="b-description">Delivery within 10 days of dispatch, location-dependent</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="quantity-control d-flex justify-content-center align-items-center">
+                        <button class="btn btn-outline-secondary">-</button>
+                        <input type="text" class="form-control text-center" value="1" style="width: 50px;">
+                        <button class="btn btn-outline-secondary">+</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="price">₹38,400</div>
+                    <div class="old-price">₹64,000</div>
+                    <div class="discount ">40% OFF</div>
+                </div>
+                <div class="remove-item d-flex align-items-center ">
+                    <i class="fas fa-trash-alt">Remove</i> 
+                </div>
+            </div>
+
+            
+            <div class="cart-item row d-flex align-items-center">
+                <div class="col-md-6 d-flex align-items-center">
+                    <img src="img/ft.webp" alt="Product Image" class="mr-3">
+                    <div>
+                        <div class="product-title">Ethan Lounge Corner</div>
+                        <div class="product-description">Expected Dispatch Date <span class="date">: May 29, 2024</div></span>
+                        <div class="addition-product">Fabric Options :Serval Light Brown...</div>
+                        <div class="addition-product">Polish Finish :Vintage Dark Teak</div>
+                        <div class="b-description">Delivery within 10 days of dispatch, location-dependent</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="quantity-control d-flex justify-content-center align-items-center">
+                        <button class="btn btn-outline-secondary">-</button>
+                        <input type="text" class="form-control text-center " value="1" style="width: 50px;">
+                        <button class="btn btn-outline-secondary">+</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="price">₹145,200</div>
+                    <div class="old-price">₹242,000</div>
+                    <div class="discount ">40% OFF</div>
+                </div>
+                <div class="remove-item d-flex align-items-center ">
+                    <i class="fas fa-trash-alt">Remove</i> 
+                </div>
+            </div>
+
+            <div class="cart-item row d-flex align-items-center">
+                <div class="col-md-6 d-flex align-items-center">
+                    <img src="img/81.avif" alt="Product Image" class="mr-3">
+                    <div>
+                        <div class="product-title">Laraah Wardrobe -4 Shutter</div>
+                        <div class="addition-product">Select Configuration :R + R</div>
+                        
+                        <div class="product-description">Expected Dispatch Date<span class="date">: Jun 28, 2024</span></div>
+                        <div class="b-description">Delivery within 10 days of dispatch, location dependent</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="quantity-control d-flex justify-content-center align-items-center">
+                        <button class="btn btn-outline-secondary">-</button>
+                        <input type="text" class="form-control text-center " value="1" style="width: 50px;">
+                        <button class="btn btn-outline-secondary">+</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="price">₹99,999</div>
+                    <div class="old-price">₹125,000</div>
+                    <div class="discount">20% OFF</div>
+                </div>
+                
+                <div class="remove-item d-flex align-items-center ">
+                    <i class="fas fa-trash-alt">Remove</i>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="col-md-4">
+            <div class="cart-summary p-3">
+                <h4>Apply Coupon Code</h4>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Enter Coupon Code">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary">Apply</button>
+                    </div>
+                </div>
+                <h4>Cart Summary</h4>
+                <ul class="list">
+                    <li class="d-flex justify-content-between"><span>SubTotal</span> <span>₹287,694.92</span></li>
+                    <li class="d-flex justify-content-between"><span>Packing Charges</span> <span>₹0</span></li>
+                    <li class="d-flex justify-content-between"><span>Shipping & Handling</span> <span>₹0</span></li>
+                    <li class="d-flex justify-content-between"><span>Total Savings</span> <span class="total-savings">₹76,764.92</span></li>
+                </ul>
+                <button class="btn btn-checkout btn-block">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
